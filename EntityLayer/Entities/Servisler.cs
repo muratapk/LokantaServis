@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace EntityLayer.Entities
 {
     public class Servisler
     {
+        [Key] 
         public int Servis_Id { get; set; }
         public string? Servis_Ad { get; set; }
         [ForeignKey("Kategoriler")]
@@ -16,5 +18,6 @@ namespace EntityLayer.Entities
         public virtual Kategoriler? Kategoriler { get; set; }
         public double? Fiyat { get; set; }
         public string? Servis_Image { get; set; }
+        public virtual List<Adisyon>? Adisyons { get; set; }
     }
 }
