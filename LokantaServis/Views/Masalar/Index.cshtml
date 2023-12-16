@@ -1,0 +1,26 @@
+﻿@model List<EntityLayer.Entities.Masalar>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <tr>
+        <td>Masa Adı</td>
+        <td>Düzelt</td>
+        <td>Silme</td>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.Masa_Ad</td>
+            <td><a href="">Düzelt</a></td>
+            <td><a href="">Silme</a></td>
+        </tr>
+        
+    }
+
+</table>
+
